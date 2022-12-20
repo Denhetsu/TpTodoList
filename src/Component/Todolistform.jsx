@@ -3,14 +3,11 @@ import { Row, Col } from "react-bootstrap";
 
 const TodoListForm = () => {
   const [input, setInput] = useState("");
-  //   const [todos, setTodos] = useState([]);
 
-  //Permet de taper dans l'input
   const Change = (e) => {
     setInput(e.target.value);
   };
 
-  // Permet de cliquer sur ajouter une tache et de ne pas reload la page
   const Submit = (e) => {
     let tmp = localStorage.getItem("todos")
       ? JSON.parse(localStorage.getItem("todos"))
